@@ -4,20 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     boton.addEventListener("click", function () {
         const nombre = document.getElementById("name").value.trim();
         const edad = parseInt(document.getElementById("edad").value.trim());
+        const resultado = document.getElementById("resultado");
 
         if (isNaN(edad) || edad < 0) {
-            alert("Por favor, ingresa una edad válida.");
+            resultado.textContent = "Por favor, ingresa una edad válida.";
+            resultado.style.color = "red";
             return;
         }
 
         if (edad >= 18) {
             if (nombre === "") {
-                alert("Por favor, ingresa tu nombre.");
+                resultado.textContent = "Por favor, ingresa tu nombre.";
+                resultado.style.color = "orange";
             } else {
-                alert(`Hola ${nombre}, tienes ${edad} años y eres mayor de edad.`);
+                resultado.textContent = `Hola ${nombre}, tienes ${edad} años y eres mayor de edad.`;
+                resultado.style.color = "green";
             }
         } else {
-            alert("No eres mayor de edad.");
+            resultado.textContent = "No eres mayor de edad.";
+            resultado.style.color = "red";
         }
     });
 });
