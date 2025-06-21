@@ -1,19 +1,23 @@
-const name= document.getElementById('name')
-const age= document.getElementById('age')
-const boton= document.getElementById('boton')
-const resultado = document.getElementById('resultado')
+document.addEventListener("DOMContentLoaded", function () {
+    const boton = document.getElementById("boton");
 
+    boton.addEventListener("click", function () {
+        const nombre = document.getElementById("name").value.trim();
+        const edad = parseInt(document.getElementById("edad").value.trim());
 
-boton.addEventListener('click', function () {
+        if (isNaN(edad) || edad < 0) {
+            alert("Por favor, ingresa una edad válida.");
+            return;
+        }
 
-
-    if (age >= 18) {
-        message = 'eres mayor de edad';
-    } else if (age < 18) {
-        message = 'eres menor de edad';
-    }else {
-        message = 'edad no valida';
-    } 
-
-    resultado.textContent="tu nombre es " + name.value + ", tienes " + age.value + " años, por lo tanto " + message;
-})
+        if (edad >= 18) {
+            if (nombre === "") {
+                alert("Por favor, ingresa tu nombre.");
+            } else {
+                alert(`Hola ${nombre}, tienes ${edad} años y eres mayor de edad.`);
+            }
+        } else {
+            alert("No eres mayor de edad.");
+        }
+    });
+});
