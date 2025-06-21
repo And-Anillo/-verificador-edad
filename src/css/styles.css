@@ -1,3 +1,4 @@
+/* Reset box model and set global font */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,6 +6,7 @@
     font-family: Arial, sans-serif;
 }
 
+/* Body layout and background */
 body {
     background-color: #f0f4f8;
     color: #333;
@@ -13,6 +15,7 @@ body {
     min-height: 100vh;
 }
 
+/* Header styles */
 header {
     background-color: #1976d2;
     color: white;
@@ -24,6 +27,7 @@ header h1 {
     margin-bottom: 0.5rem;
 }
 
+/* Main section centers content */
 main {
     flex: 1;
     display: flex;
@@ -32,6 +36,7 @@ main {
     padding: 2rem;
 }
 
+/* Content container with card style */
 .content {
     background-color: white;
     padding: 2rem;
@@ -44,16 +49,19 @@ main {
     gap: 1rem;
 }
 
+/* Label styling */
 label {
     font-weight: bold;
 }
 
+/* Input field styling */
 input {
     padding: 0.5rem;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* Button styling and hover effect */
 button {
     background-color: #1976d2;
     color: white;
@@ -68,12 +76,15 @@ button:hover {
     background-color: #0d47a1;
 }
 
+/* Footer styling */
 footer {
     text-align: center;
     padding: 1rem;
     font-size: 0.9rem;
     color: #666;
 }
+
+/* Responsive adjustments for small screens */
 @media (max-width: 480px) {
     .content {
         padding: 1rem;
@@ -89,4 +100,3 @@ footer {
         font-size: 1rem;
     }
 }
-
